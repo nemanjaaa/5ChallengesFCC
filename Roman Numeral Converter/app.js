@@ -43,9 +43,9 @@ function convertToRoman(num) {
         let newString = romanNumerals[stringNum[0] + 0 + 0] + (parseInt(stringNum[1]) > 0 ? romanNumerals[stringNum[1] + 0] : "") + (parseInt(stringNum[2]) > 0 ? romanNumerals[stringNum[2]] : "")
         return newString
     } else if (stringNum.length == 4) {
-        let newString = romanNumerals[stringNum[0] + 0 + 0 + 0] + romanNumerals[stringNum[1] + 0 + 0] + romanNumerals[stringNum[2] + 0] + romanNumerals[stringNum[3]]
+        let newString = romanNumerals[stringNum[0] + 0 + 0 + 0] + (parseInt(stringNum[1]) > 0 ? romanNumerals[stringNum[1] + 0 + 0] : "") + (parseInt(stringNum[2]) > 0 ? romanNumerals[stringNum[2] + 0] : "") + (parseInt(stringNum[3]) > 0 ? romanNumerals[stringNum[3]] : "")
         return newString
     }
    }
    
-console.log(convertToRoman(144));
+convertToRoman(144);
